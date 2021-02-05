@@ -1,28 +1,30 @@
 package edu.jespinoza.testng;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestUI {
+    private static final Logger logger = Logger.getLogger(TestUI.class);
 
     @BeforeTest
     public void beforeTest() {
-        System.out.println("@BeforeTest in TestUI");
+        logger.info("@BeforeTest in TestUI");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("@AfterTest in TestUI\n");
+        logger.info("@AfterTest in TestUI\n");
     }
 
     @Test(groups= "ui")
     public void openConfirmationDialog() {
-        System.out.println("openConfirmationDialog()");
+        logger.info("openConfirmationDialog()");
     }
 
     @Test(groups= "ui")
     public void openFileDialog() {
-        System.out.println("openFileDialog()");
+        logger.info("openFileDialog()");
     }
 }

@@ -1,29 +1,31 @@
 package edu.jespinoza.testng;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 public class TestBackendConfig {
+    private static final Logger logger = Logger.getLogger(TestBackendConfig.class);
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("@BeforeSuite\n");
+        logger.info("@BeforeSuite\n");
     }
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("@AfterSuite");
+        logger.info("@AfterSuite");
     }
 
     @BeforeTest
     public void beforeTest() {
-        System.out.println("@BeforeTest in TestBackendConfig");
+        logger.info("@BeforeTest in TestBackendConfig");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("@AfterTest in TestBackendConfig\n");
+        logger.info("@AfterTest in TestBackendConfig\n");
     }
 }

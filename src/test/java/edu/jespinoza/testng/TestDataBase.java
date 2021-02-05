@@ -1,21 +1,23 @@
 package edu.jespinoza.testng;
 
+import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 
 public class TestDataBase {
+    private static final Logger logger = Logger.getLogger(TestDataBase.class);
 
     @Test(groups= "database")
     public void testInsert(){
-        System.out.println("testInsert()");
+        logger.info("testInsert()");
     }
 
     @Test(groups= "database")
     public void testUpdate(){
-        System.out.println("testUpdate()");
+        logger.info("testUpdate()");
     }
 
     @Test(groups= "database")
     public void testDelete(){
-        System.out.println("testDelete()");
+        logger.info("testDelete()");
     }
 }
